@@ -2,22 +2,17 @@
 const projects = [
     {
         title: 'Looping Cards',
-        type: 'Web / Frontend',
-        desc: 'Interaktywny zestaw kart z płynnymi animacjami i sterowaniem — demo wizualne.',
-        tech: ['HTML', 'CSS', 'JavaScript']
+        type: 'Game Dev',
+        desc: 'Karcianka w której musisz kolejkować swoje karty i tworzyć kombosy',
+        tech: ['Unity', 'C#']
     },
     {
         title: 'Beekeeper Simulator',
         type: 'Game Dev',
-        desc: 'Symulator pszczelarza — zarządzanie ulami, zasobami i sezonami.',
+        desc: 'Symulator pszczelarza.',
         tech: ['Unity', 'C#']
     },
-    {
-        title: 'Statkomania',
-        type: 'Game Dev',
-        desc: 'Prototyp gry o zarządzaniu flotą statków i ekonomii.',
-        tech: ['Godot', 'GDScript']
-    }
+    
 ];
 
 const projectsContainer = document.getElementById('projects-list');
@@ -140,3 +135,35 @@ document.addEventListener('keydown', (e)=>{
 
 // render gallery on load
 renderGallery();
+
+// -- Mobile nav toggle & dropdown touch behavior --
+const navToggle = document.getElementById('nav-toggle');
+if(navToggle){
+    navToggle.addEventListener('click', (e)=>{
+        e.stopPropagation();
+        document.documentElement.classList.toggle('nav-open');
+    });
+
+    // close nav when clicking outside
+    document.addEventListener('click', (ev)=>{
+        if(document.documentElement.classList.contains('nav-open')){
+            const nav = document.querySelector('.nav-inner');
+            if(nav && !nav.contains(ev.target)){
+                document.documentElement.classList.remove('nav-open');
+            }
+        }
+    });
+}
+
+// dropdown toggles on touch devices
+document.querySelectorAll('.nav-item > .dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e)=>{
+        const parent = toggle.parentElement;
+        if(!parent) return;
+        // on small screens, toggle open class; on large screens hover still works
+        if(window.matchMedia && window.matchMedia('(max-width: 720px)').matches){
+            e.stopPropagation();
+            parent.classList.toggle('open');
+        }
+    });
+});
