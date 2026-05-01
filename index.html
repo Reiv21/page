@@ -1,11 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Justyn Odyjas</title>
+    <script>!function(){try{const t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');else document.documentElement.classList.remove('dark')}catch(e){}}();</script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Hello World</h1>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">Justyn Odyjas</div>
+            <div class="nav-links">
+                <a href="#about">O mnie</a>
+                <div class="nav-item">
+                    <span class="dropdown-toggle">Projekty</span>
+                    <div class="dropdown-menu">
+                        <a href="looping-cards.html">Looping Cards</a>
+                        <a href="beekeeper-simulator.html">Beekeeper Simulator</a>
+                        <a href="statkomania.html">Statkomania</a>
+                        <a href="#projects">Wszystkie projekty</a>
+                    </div>
+                </div>
+                <a href="beekeeper-simulator.html#gallery">Galeria</a>
+                <a href="#skills">Umiejętności</a>
+                <a href="#contact">Kontakt</a>
+            </div>
+            <div style="display:flex;gap:.5rem;align-items:center;">
+                <button id="theme-toggle" aria-label="Przełącz motyw">🌙</button>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <h1>Justyn Odyjas</h1>
+        <p class="subtitle">Programista. Pasjonat Game Dev. Tworzę projekty.</p>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>O mnie</h2>
+            <p class="about-text">
+                Piszę kod, robie gry, żyję, uczę się nowych rzeczy i eksperymentuję. Lubie robić to co robię, czasami nie lubię tego co z tego wchodzi.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Projekty</h2>
+            <p class="about-text">Projekty są generowane z prostego obiektu w tym pliku — możesz je łatwo dodać w sekcji skryptu.</p>
+            <div class="projects" id="projects-list">
+                <!-- Projekty zostaną wstawione tutaj przez JS -->
+            </div>
+        </section>
+
+        
+
+        <section id="skills">
+            <h2>Umiejętności i technologie</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Języki</h3>
+                    <div class="skill-list">
+                        C#<br>
+                        Webowy Shit<br>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Cechy</h3>
+                    <div class="skill-list">
+                        Team Lider<br>
+                        Ten zabawny<br>
+                    
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Game Dev</h3>
+                    <div class="skill-list">
+                        Unity<br>
+                        Godot<br>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Kontakt</h2>
+            <p class="about-text">Masz pytanie lub chcesz współpracować? Napisz: <a href="mailto:justynodyjas@gmail.com">justynodyjas@gmail.com</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="links">
+            <a href="https://github.com/Reiv21">GitHub</a>
+            <a href="mailto:justynodyjas@gmail.com">Email</a>
+        </div>
+        <p>&copy; 2026 Justyn Odyjas. Wszelkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="scripts.js" defer></script>
 </body>
 </html>

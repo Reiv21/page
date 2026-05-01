@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Beekeeper Simulator</title>
+    <script>!function(){try{const t=localStorage.getItem('theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches))document.documentElement.classList.add('dark');else document.documentElement.classList.remove('dark')}catch(e){}}();</script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <div class="brand">Justyn Odyjas</div>
+            <div class="nav-links">
+                <a href="index.html#about">O mnie</a>
+                <div class="nav-item">
+                    <span class="dropdown-toggle">Projekty</span>
+                    <div class="dropdown-menu">
+                        <a href="looping-cards.html">Looping Cards</a>
+                        <a href="beekeeper-simulator.html">Beekeeper Simulator</a>
+                        <a href="statkomania.html">Statkomania</a>
+                        <a href="index.html#projects">Wszystkie projekty</a>
+                    </div>
+                </div>
+                <a href="beekeeper-simulator.html#gallery">Galeria</a>
+                <a href="index.html#skills">Umiejętności</a>
+                <a href="index.html#contact">Kontakt</a>
+            </div>
+            <div style="display:flex;gap:.5rem;align-items:center;">
+                <button id="theme-toggle" aria-label="Przełącz motyw">🌙</button>
+            </div>
+        </div>
+    </nav>
+  <!-- Podstrona projektu Beekeeper Simulator -->
+  <main style="max-width:800px;margin:4rem auto;padding:0 2rem;">
+    <h1>Beekeeper Simulator</h1>
+        <p class="subtitle">Symulator pszczelarza.</p>
+
+    <section>
+      <h2>Overview</h2>
+        <h4>Początki</h4>
+      <p>Beekeeper Simulator to symulator pszczelarza, który zacząłem robić w 2024 roku. Od zawsze interesowałem się pszczołami i pszczelarstwem, jednak nigdy sam nie mogłem mieć własnego ula.</p>
+            <h4>Założenia</h4>
+        <p>Chciałem stworzyć grę w której będę mógł poczuć klimat pszczelarstwa. Chciałem mieć zarządzanie ulami, sprzedaż miodu, realistyczną i sadysfakcjonującą mechanikę obróbki miodu.</p>
+        <h4>Postępy</h4>
+        <p>Niestety wątpię, żeby ten projekt miał szansę na zakończenie. Powodów jest niestety kilka.</p>
+        <ul>
+            <li>Brak czasu</li>
+            <li>Brak motywacji - projekt wszedł w fazę gdzie muszę robić nie zbyt ciekawe rzeczy, poprawiać istniejące już mechaniki</li>
+            <li>Brak jasnej wizji - nie wiem jak dokładnie chcę, żeby gra wyglądała. Scope gry jest duży, wydaje mi się, że gra po prostu jest nudna</li>
+            <li>Brak możliwości monetyzacji - gra się nie sprzeda. Po prostu</li>
+            <li>Brak odpowiedniej oprawy graficznej - nie jestem grafikiem, słabo umiem robić modele 3d.</li>
+        </ul>
+
+        <h3 style="color: red;"><strong> Projekt będę rozwijał sporadycznie!</strong></h3>
+    </section>
+    
+    <section>
+      <h2>Aktualny stan projektu</h2>
+        <p><i>Stan na 1.05.2026 - ostatni commit w styczniu.</i></p>
+        
+        <h4>Krótkie podusmowanie</h4>
+        <p>Czy działa? Tak. Czy jest grywalna? Tak. Czy ma sens? Nie.</p>
+        <p>Gra jest w stanie, w którym można ją uruchomić, ale gra nie ma sensu. Nie ma zapisu gry (Miłosz, obiecuję, że to kiedyś zrobię), gra nie daje graczowi żadnego celu, można po prostu w bardzo prosty sposób zarabiać pieniądze, płacić rachunki i nic więcej. Gra jest po prostu nudna.</p>
+        <p>Co prawda można kupić ulepszenia, dokupić miodarkę, zacząć robić inne produkty. Jednak czy ma to sens w wypadku kiedy i tak nie mamy co robić z pieniędzmi po 15 minutach gry?</p>
+
+        <h4>Mechaniki</h4>
+        <ul>
+
+            <li>Ule, Pszczoły, Generowanie miodu
+                <ul>
+                    <li>Czyszczenie ulów (Można to robić ale to nic nie wnosi)</li>
+                    <li>Zachowanie pszczół w ulu zależnie od pory roku</li>
+                    <li>Generowanie zasobów, spozywanie ich</li>
+                    <li>Możliwość śmierci całej rodziny</li>
+                    <li>Możliwość dokupienia nowych ulów i stworzeniu nowych rodzin</li>
+                </ul>
+            </li>
+
+            <li>Pory roku</li>
+                <ul>
+                    <li>Różne eventy zależne od pory roku</li>
+                    <li>Różne zachowania pszczół zależnie od pory roku</li>
+                </ul>
+            <li>Obróbka miodu - Najbardziej rozwinięta mechanika</li>
+                <ul>
+                    <li>Przetwarzanie miodu z ula do czystego miodu
+
+                    <ul>
+                        <li>Oczyszczanie miodu z pozostałych pszczół</li>
+                        <li>Odsklepianie ramki</li>
+                        <li>Wyciąganie miodu z ramki</li>
+                        <li>Filtrowanie miodu</li>
+                    </ul>
+                    </li>
+                    
+                    <li>Tworzenie miodu pitnego
+                        <ul>
+                            <li>Używanie beczki do fermentacji, gotowego miodu i drożdży</li>
+                        </ul>
+
+                    </li>
+                    
+                    <li>Tworzenie miodu z dodatkami
+                        <ul>
+                            <li>Używanie beczki do fermentacji, gotowego miodu i paczki owoców</li>
+                        </ul>
+                    </li>
+                </ul>
+            <li>Sprzedaż miodu / Sklep
+                <ul>
+                    <li>Rozstawianie mebli w sklepie</li>
+                    <li>Otwieranie/Zamykanie sklepu</li>
+                    <li>Rozlewanie produktów na buletki/słoiki</li>
+                    <li>Ukladanie produktów na półkach</li>
+                </ul>
+
+            </li>
+            
+            <li>Rachunki</li>
+            <li>Ulepszenia
+
+                <ul>
+                    <li>Miejsce na nowe ule</li>
+                    <li>Większe zarobki</li>
+                    <li>Dużo rzeczy, nie pamiętam nawet</li>
+                </ul>
+            </li>
+            
+        </ul>
+
+        <h4>Galeria</h4>
+        <div class="gallery-grid" id="gallery-grid" style="margin-top:0.5rem;">
+            <!-- images will be injected here by scripts.js -->
+        </div>
+        
+
+    </section>
+    <section>
+      <!-- <h2>Linki</h2>
+      <ul>
+        <li><a href="#">Repozytorium</a></li>
+        <li><a href="#">Demo / Build</a></li>
+      </ul>
+    </section> -->
+
+    <section>
+      <h2>Devlog</h2>
+      <p>Wpisy developerskie i notatki.</p>
+      <div>
+
+      </div>
+    </section>
+
+    <p><a href="index.html">Powrót</a></p>
+  </main>
+    <!-- Lightbox modal (dla galerii) -->
+    <div id="lightbox" class="lightbox" aria-hidden="true">
+            <button class="lb-close" aria-label="Zamknij">✕</button>
+            <button class="lb-prev" aria-label="Poprzednie">‹</button>
+            <img class="lb-image" src="" alt="">
+            <button class="lb-next" aria-label="Następne">›</button>
+            <div class="lb-caption"></div>
+    </div>
+
+    <script src="scripts.js" defer></script>
+</body>
+</html>
